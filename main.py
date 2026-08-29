@@ -49,13 +49,13 @@ def get_agents():
         "AZURE_OPENAI_ENDPOINT",
         "https://openai-api-management-gw.azure-api.net",
     )
-    api_key = os.getenv("AZURE_OPENAI_API_KEY")
+    api_key = os.getenv("AZURE_OPENAI_API_KEY") or os.getenv("OPENAI_API_KEY")
     api_version = os.getenv("AZURE_OPENAI_API_VERSION", "2025-01-01-preview")
     deployment = os.getenv("AZURE_OPENAI_DEPLOYMENT", "gpt-5-mini")
     model = os.getenv("AZURE_OPENAI_MODEL", deployment)
 
     if not api_key:
-        raise RuntimeError("AZURE_OPENAI_API_KEY is not set")
+        raise RuntimeError("AZURE_OPENAI_API_KEY (or OPENAI_API_KEY) is not set")
 
     model_client = AzureOpenAIChatCompletionClient(
         azure_endpoint=azure_endpoint,
