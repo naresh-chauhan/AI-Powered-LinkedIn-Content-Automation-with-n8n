@@ -1,0 +1,21 @@
+._projectTabs_1nw28_1 {
+  padding: var(--spacing-2xs) 0 var(--spacing-l);
+}._projectHeader_13qlt_1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  padding-bottom: var(--spacing-m);
+  min-height: 64px;
+}
+._icon_13qlt_9 {
+  border: 1px solid var(--color-foreground-light);
+  padding: 6px;
+  border-radius: var(--border-radius-base);
+}
+._actions_13qlt_15 {
+  margin-left: auto;
+}

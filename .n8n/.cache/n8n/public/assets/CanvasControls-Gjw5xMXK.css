@@ -1,0 +1,27 @@
+._zoomMenu_1f09c_1 {
+  position: absolute;
+  bottom: var(--spacing-s);
+  left: var(--spacing-s);
+  line-height: 25px;
+  color: #444;
+  padding-right: 5px;
+}
+._zoomMenu_1f09c_1 button {
+  border: var(--border-base);
+}
+._zoomMenu_1f09c_1 > * + * {
+  margin-left: var(--spacing-3xs);
+}
+._zoomMenu_1f09c_1 > *:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+@media (max-width: 600px) {
+._regularZoomMenu_1f09c_20 {
+    bottom: 90px;
+}
+}
+._demoZoomMenu_1f09c_25 {
+  left: 10px;
+  bottom: 10px;
+}

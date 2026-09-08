@@ -1,0 +1,138 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {}
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        0,
+        0
+      ],
+      "id": "32d8e36a-f3b7-4ae4-a9d8-ea12a49873d5",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "{\n  \"company\": \"={{$json.company}}\",\n  \"tone\": \"={{$json.tone}}\",\n  \"topic\": \"={{$json.topic}}\"\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        224,
+        0
+      ],
+      "id": "397d19b4-b8f3-44f4-a29b-3196d78b881a",
+      "name": "Brand Config"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://127.0.0.1:8000/linkedin",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"company\": \"={{$json.company}}\",\n  \"tone\": \"={{$json.tone}}\",\n  \"topic\": \"={{$json.topic}}\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        448,
+        0
+      ],
+      "id": "f6758668-9e08-4fb2-bb72-edfba4d00c10",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "fdf5de14-43d8-482b-948a-006dd89bfb91",
+              "name": "final_post",
+              "value": "={{$json.draft + \"\\n\\n\" + $json.hashtags}}",
+              "type": "string"
+            },
+            {
+              "id": "df78a07f-8547-421e-bdfc-d28fc0bde390",
+              "name": "confidence",
+              "value": "={{Number($json.confidence_score ?? $json.confidence ?? 0)}}",
+              "type": "string"
+            },
+            {
+              "id": "1a73aac5-cc98-42b8-81ea-a41cc9d49f5d",
+              "name": "dry_run",
+              "value": "={{$node[\"Brand Config\"].json[\"dry_run\"]}}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        672,
+        0
+      ],
+      "id": "40a04678-4a3d-4f76-9bf9-4141fe2156eb",
+      "name": "Compose Final"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Brand Config",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Brand Config": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Compose Final",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "f7ea4c1a-c7fb-4285-9a22-2baffb26ebd7",
+  "meta": {
+    "instanceId": "c50657a70d2cd7bdd6f58e2d6a11e4c963c33f015d1385d16674d926cd1d42da"
+  },
+  "nodeGroups": [],
+  "id": "KS55PJ26KRY8yRFh",
+  "tags": []
+}

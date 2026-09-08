@@ -1,0 +1,105 @@
+._cardContainer_1cg0i_1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: var(--spacing-s);
+  border: var(--border-width-base) var(--border-style-base) var(--color-info-tint-1);
+  border-radius: var(--border-radius-large);
+  background-color: var(--color-background-xlight);
+}
+._packageCard_1cg0i_9,
+._cardSkeleton_1cg0i_10 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+._packageCard_1cg0i_9 {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+._cardSkeleton_1cg0i_10 {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+._loader_1cg0i_24 {
+  width: 50%;
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+}
+._loader_1cg0i_24:last-child {
+  width: 70%;
+}
+._loader_1cg0i_24:last-child div {
+  margin: 0;
+}
+._cardInfoContainer_1cg0i_35 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+._cardTitle_1cg0i_40 {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+._cardTitle_1cg0i_40 span {
+  line-height: 1;
+}
+._cardSubtitle_1cg0i_47 {
+  margin-top: 2px;
+  padding-right: var(--spacing-m);
+}
+._cardControlsContainer_1cg0i_52 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: var(--spacing-3xs);
+}
+._cardActions_1cg0i_58 {
+  padding-left: var(--spacing-3xs);
+}._container_18kse_1 {
+  height: 100%;
+  padding-right: var(--spacing-2xs);
+}
+._container_18kse_1 > * {
+  margin-bottom: var(--spacing-2xl);
+}
+._headingContainer_18kse_9 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+._loadingContainer_18kse_14 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--spacing-xs);
+}
+._actionBoxContainer_18kse_19 {
+  text-align: center;
+}
+._cardsContainer_18kse_23 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: var(--spacing-2xs);
+}

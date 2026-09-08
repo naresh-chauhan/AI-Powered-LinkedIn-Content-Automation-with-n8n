@@ -1,0 +1,41 @@
+._operation_1mn5e_1 {
+  padding: 0 0 var(--spacing-l) var(--spacing-l);
+}._projectSettings_2vgb7_1 {
+  display: grid;
+  width: 100%;
+  justify-items: center;
+  grid-auto-rows: -webkit-max-content;
+  grid-auto-rows: max-content;
+}
+._projectSettings_2vgb7_1 form {
+  width: 100%;
+  max-width: 1280px;
+  padding: 0 var(--spacing-2xl);
+}
+._projectSettings_2vgb7_1 form fieldset {
+  padding-bottom: var(--spacing-2xl);
+}
+._projectSettings_2vgb7_1 form fieldset label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-size: var(--font-size-xl);
+}
+._header_2vgb7_21 {
+  width: 100%;
+  max-width: 1280px;
+  padding: var(--spacing-l) var(--spacing-2xl) 0;
+}
+._upgrade_2vgb7_27 {
+  cursor: pointer;
+}
+._buttons_2vgb7_31 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}

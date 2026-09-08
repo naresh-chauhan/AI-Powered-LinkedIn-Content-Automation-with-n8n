@@ -1,0 +1,21 @@
+._container_1qzsb_1 {
+  height: 100%;
+  padding-right: var(--spacing-2xs);
+}
+._container_1qzsb_1 > * {
+  margin-bottom: var(--spacing-2xl);
+}
+._usersContainer_1qzsb_9 > * {
+  margin-bottom: var(--spacing-2xs);
+}
+._buttonContainer_1qzsb_13 {
+  display: inline-block;
+  float: right;
+  margin-bottom: var(--spacing-l);
+}
+._setupInfoContainer_1qzsb_19 {
+  max-width: 728px;
+}
+._alert_1qzsb_23 {
+  left: calc(50% + 100px);
+}

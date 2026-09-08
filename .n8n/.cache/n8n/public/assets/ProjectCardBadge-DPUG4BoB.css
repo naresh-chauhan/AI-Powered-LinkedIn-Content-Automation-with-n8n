@@ -1,0 +1,20 @@
+._badge_2xnky_1 {
+  padding: var(--spacing-4xs) var(--spacing-2xs);
+  background-color: var(--color-background-xlight);
+  border-color: var(--color-foreground-base);
+  z-index: 1;
+  position: relative;
+  height: 23px;
+}
+._badge_2xnky_1 .n8n-text {
+  color: var(--color-text-base);
+}
+._countBadge_2xnky_13 {
+  margin-left: -5px;
+  z-index: 0;
+  position: relative;
+  height: 23px;
+}
+._countBadge_2xnky_13 .n8n-text {
+  color: var(--color-text-light);
+}
